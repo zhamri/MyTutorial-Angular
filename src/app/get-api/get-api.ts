@@ -21,13 +21,13 @@ import { UserService } from '../services/user';
   templateUrl: './get-api.html',
   styleUrl: './get-api.css',
 })
-export class GetApi implements OnInit {
+export class GetApi {
 
   userList: User[] = [];                      // 👈 use the model here
 
   constructor(private userService: UserService) {}
 
-  ngOnInit(): void {
+  loadUser(): void {
     this.userService.getUsers().subscribe(users => {
       this.userList = users;
     });
