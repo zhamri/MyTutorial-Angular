@@ -2,12 +2,34 @@
 <!--<router-outlet />-->
 
 <!-- src/app/app.html -->
-<nav style="background-color:#007bff; padding:10px;">
-  <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-     style="color:white; margin-right:20px; text-decoration:none;">Home</a>
-  <a routerLink="about" routerLinkActive="active"
-     style="color:white; text-decoration:none;">About</a>
-</nav>
+<!--<nav style="background-color:#007bff; padding:10px;">-->
+<!--  <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"-->
+<!--     style="color:white; margin-right:20px; text-decoration:none;">Home</a>-->
+<!--  <a routerLink="about" routerLinkActive="active"-->
+<!--     style="color:white; text-decoration:none;">About</a>-->
+<!--</nav>-->
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Home</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" routerLink="about">About</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Separated link</a></li>
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="about">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+  </li>
+</ul>
 
 <div style="padding:20px;">
   <router-outlet></router-outlet>
