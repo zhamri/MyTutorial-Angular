@@ -1,2 +1,14 @@
-<h1>STIWK2124 Web Engineering</h1>
-<router-outlet />
+<!--<h1>STIWK2124 Web Engineering</h1>-->
+<!--<router-outlet />-->
+
+<!-- src/app/app.html -->
+<nav style="background-color:#007bff; padding:10px;">
+  <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+     style="color:white; margin-right:20px; text-decoration:none;">Home</a>
+  <a routerLink="about" routerLinkActive="active"
+     style="color:white; text-decoration:none;">About</a>
+</nav>
+
+<div style="padding:20px;">
+  <router-outlet></router-outlet>
+</div>
