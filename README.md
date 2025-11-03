@@ -32,6 +32,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // 👈 required for dropdow
 
 ### 4. Copy code from Bootstrap 
 Example: Tabs with dropdowns
+1. https://getbootstrap.com/docs/5.3/components/navs-tabs/
 
 ### 5. Paste at `app.html`
 src/app/app.html
