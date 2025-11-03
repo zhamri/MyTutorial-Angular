@@ -17,4 +17,6 @@ export class StudentComponent {
     lastName: 'che ani',
     year: 2025,
   };
+
+  imageUrl = 'assets/images/uum.png';
 }
