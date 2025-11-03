@@ -1,4 +1,5 @@
 # One-Way Data Binding
+One-way data binding in Angular means that data flows in only one direction — from the component (TypeScript) → to the view (HTML).
 
 1. Create model for student
 ```aiignore
