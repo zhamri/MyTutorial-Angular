@@ -61,7 +61,7 @@ import {StudentComponent} from './student/student';
 })
 ```
 
-6. Copy uum.png into `src/assets/images/uum.png`
+6. Copy `uum.png` into `src/assets/images/uum.png`
    - `src/assets` is a must
 
 7. Update `angular.json`
