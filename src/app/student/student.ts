@@ -22,4 +22,13 @@ export class Student {
   submit() {
     console.log(this.studentForm.value);
   }
+
+  get name() {
+    return this.studentForm.get('name');
+  }
+
+  get email() {
+    return this.studentForm.get('email');
+  }
+
 }

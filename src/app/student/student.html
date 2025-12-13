@@ -1,24 +1,26 @@
 <form [formGroup]="studentForm" (ngSubmit)="submit()">
 
-  <input type="text" formControlName="name" placeholder="Name"/>
-  @if (studentForm.get('name')?.touched && studentForm.get('name')?.invalid) {
+  <input type="text" formControlName="name" placeholder="Name" />
+
+  @if (name?.touched && name?.invalid) {
     <div>
-      @if (studentForm.get('name')?.hasError('required')) {
+      @if (name?.hasError('required')) {
         <div class="error">Name is required</div>
       }
-      @if (studentForm.get('name')?.hasError('minlength')) {
+      @if (name?.hasError('minlength')) {
         <div class="error">Name must be at least 3 characters</div>
       }
     </div>
   }
 
   <input type="email" formControlName="email" placeholder="Email" />
-  @if (studentForm.get('email')?.touched && studentForm.get('email')?.invalid) {
+
+  @if (email?.touched && email?.invalid) {
     <div>
-      @if (studentForm.get('email')?.hasError('required')) {
+      @if (email?.hasError('required')) {
         <div class="error">Email is required</div>
       }
-      @if (studentForm.get('email')?.hasError('email')) {
+      @if (email?.hasError('email')) {
         <div class="error">Email format is not valid</div>
       }
     </div>
