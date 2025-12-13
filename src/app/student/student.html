@@ -1,33 +1,49 @@
+<h2>Add Student (Reactive Form + Signals)</h2>
+
 <form [formGroup]="studentForm" (ngSubmit)="submit()">
+  <div>
+    <label>Name</label><br/>
+    <input formControlName="name"/>
 
-  <input type="text" formControlName="name" placeholder="Name" />
+    @if (name?.touched && name?.invalid) {
+      <small>
+        Name required (min 3 chars)
+      </small>
+    }
+  </div>
 
-  @if (name?.touched && name?.invalid) {
-    <div>
-      @if (name?.hasError('required')) {
-        <div class="error">Name is required</div>
-      }
-      @if (name?.hasError('minlength')) {
-        <div class="error">Name must be at least 3 characters</div>
-      }
-    </div>
-  }
+  <div style="margin-top: 8px;">
+    <label>Email</label><br/>
+    <input formControlName="email"/>
 
-  <input type="email" formControlName="email" placeholder="Email" />
+    @if (email?.touched && email?.invalid) {
+      <small>
+        Valid email required
+      </small>
+    }
+  </div>
 
-  @if (email?.touched && email?.invalid) {
-    <div>
-      @if (email?.hasError('required')) {
-        <div class="error">Email is required</div>
-      }
-      @if (email?.hasError('email')) {
-        <div class="error">Email format is not valid</div>
-      }
-    </div>
-  }
-
-  <button type="submit" [disabled]="studentForm.invalid">
-    Save
-  </button>
-
+  <button type="submit" style="margin-top: 10px;">Add</button>
 </form>
+
+<hr/>
+
+<h3>Student List</h3>
+
+@if (students().length === 0) {
+  <p>No students yet.</p>
+} @else {
+  <ul>
+    @for (s of students(); track s.id) {
+      <li>
+        {{ s.id }} - {{ s.name }} ({{ s.email }})
+        <button
+          (click)="deleteStudent(s.id)"
+          style="margin-left: 8px;"
+        >
+          Delete
+        </button>
+      </li>
+    }
+  </ul>
+}
