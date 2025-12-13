@@ -1,0 +1,15 @@
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Error state */
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+/* Success state */
+input.ng-valid.ng-touched {
+  border: 1px solid green;
+}
