@@ -1,6 +1,10 @@
-<h1>Hello World</h1>
-<p>Angular is working</p>
+<h1>Router Demo</h1>
+
+<nav class="nav">
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  <a routerLink="/hello" routerLinkActive="active">Hello</a>
+</nav>
 
 <hr />
 
-<app-hello></app-hello>
+<router-outlet></router-outlet>
