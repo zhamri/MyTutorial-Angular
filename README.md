@@ -8,3 +8,7 @@ ng g c hello --standalone
 
 ng add @angular/material
 ```
+
+## References
+1. https://v12.material.angular.io/
+2. https://material.angular.dev/
