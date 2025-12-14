@@ -5,6 +5,7 @@ cd hello-angular
 ng serve -o
 
 ng g c hello --standalone
+ ng g c home --standalone
 
 ng add @angular/material
 ```
